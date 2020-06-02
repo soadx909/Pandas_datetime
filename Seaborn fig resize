@@ -1,0 +1,19 @@
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+np.random.seed(0)
+n, p = 40, 8
+d = np.random.normal(0, 2, (n, p))
+d += np.log(np.arange(1, p + 1)) * -5 + 10
+
+
+# plot
+sns.set_style('ticks')
+fig, ax = plt.subplots()
+# the size of A4 paper
+fig.set_size_inches(11.7, 8.27)
+sns.violinplot(data=d, inner="points", ax=ax)    
+sns.despine()
+
+fig.savefig('example.png')
