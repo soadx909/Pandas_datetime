@@ -17,3 +17,9 @@ sns.violinplot(data=d, inner="points", ax=ax)
 sns.despine()
 
 fig.savefig('example.png')
+
+# Using matplotlib object/class to create seaborn
+
+fig, (ax1, ax2) = plt.subplots(2)
+sns.regplot(x, y, ax=ax1)
+sns.kdeplot(x, ax=ax2)
