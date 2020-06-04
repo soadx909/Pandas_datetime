@@ -1,0 +1,5 @@
+#Reposition legend
+g.despine(left=True)
+plt.legend(loc='upper right')
+
+
