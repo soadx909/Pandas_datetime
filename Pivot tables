@@ -1,0 +1,13 @@
+# Creating % Pivot tables
+
+table['% of Total'] = (table.C / table.C.sum() * 100).astype(str) + '%'
+table['% of B'] = (table.C / table.groupby(level=0).C.transform(sum) * 100).astype(str) + '%'
+print table
+        C % of Total % of B
+A B                        
+x one   2       4.0%  20.0%
+  two   8      16.0%  80.0%
+y one  18      36.0%  90.0%
+  two   2       4.0%  10.0%
+z one   2       4.0%  10.0%
+  two  18      36.0%  90.0%
