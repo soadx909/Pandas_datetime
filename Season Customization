@@ -42,8 +42,8 @@ fig.autofmt_xdate()
 plt.show()
 
 
-
-# ax1, ax2 = g.axes[0]
+# Adding lines on the chart
+ax1, ax2 = g.axes[0]
 
 ax1.axhline(10, ls='--')
 ax2.axhline(30, ls='--')
