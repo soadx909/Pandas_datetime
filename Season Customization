@@ -41,3 +41,14 @@ ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y.%m.%d'))
 fig.autofmt_xdate()
 plt.show()
 
+
+
+# ax1, ax2 = g.axes[0]
+
+ax1.axhline(10, ls='--')
+ax2.axhline(30, ls='--')
+
+ax1.text(0.5,25, "Some text")
+ax2.text(0.5,25, "Some text")
+
+plt.show()
